@@ -1,74 +1,113 @@
-.btn {
-  padding: 0.7rem;
+.page {
+  padding: 0.5rem;
 
-  width: 100%;
-
-  border: none;
-  border-radius: 7px;
-  outline: none;
-
-  font-size: 1rem;
-  font-weight: 500;
-  color: rgb(255, 78, 78);
-
-  background-color: rgba(255, 78, 78, 0.1);
-
-  transition: 0.4s;
-
-  &:active {
-    background-color: rgba(255, 78, 78, 0.405);
-  }
-}
-
-.title {
-  margin: 2rem 0 2rem 0;
-  color: #fff;
-  font-size: 2rem;
-}
-
-.users {
-  padding: 1rem;
-  margin: 0.6rem;
-
-  border-radius: 12px;
-  border: 1px solid #c7daff52;
-
-  backdrop-filter: blur(4px);
-
-  line-height: 1.3;
+  width: 100vw;
+  max-width: 1220px;
 
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  justify-content: center;
+  flex-direction: column;
 
-  .logo {
-    width: 80px;
+  .btn {
+    padding: 0.7rem;
 
-    img {
-      width: 100%;
-      border-radius: 50%;
+    width: 100%;
+    max-width: 300px;
+
+    border: none;
+    border-radius: 7px;
+    outline: none;
+
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(255, 78, 78);
+
+    background-color: rgba(255, 78, 78, 0.1);
+
+    transition: 0.4s;
+
+    &:active {
+      background-color: rgba(255, 78, 78, 0.405);
     }
   }
 
-  .user_data {
-    display: flex;
-    flex-direction: column;
+  .title {
+    margin: 2rem 0 2rem 0;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 2rem;
+  }
 
-    .full_name {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: #ffffff;
+  .users {
+    padding: 1rem;
+    margin: 0.6rem;
+
+    width: 100%;
+    max-width: 400px;
+
+    border-radius: 12px;
+    border: 1px solid #c7daff52;
+
+    backdrop-filter: blur(4px);
+
+    line-height: 1.3;
+
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
     }
 
-    .username,
-    .phone,
-    .email {
-      font-size: 1rem;
-      font-weight: 500;
-      color: #dbefffa9;
+    .logo {
+      width: 100%;
+      max-width: 50px;
 
-      span {
-        text-decoration: underline;
+      @media (max-width: 768px) {
+        max-width: 80px;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    .user_data {
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: 768px) {
+        align-items: center;
+      }
+
+      .full_name {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #ffffff;
+
+        @media (max-width: 768px) {
+          font-size: 1.2rem;
+        }
+      }
+
+      .username,
+      .phone,
+      .email {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #dbefffa9;
+
+        @media (max-width: 768px) {
+          font-size: 0.9rem;
+        }
+
+        span {
+          text-decoration: underline;
+        }
       }
     }
   }
